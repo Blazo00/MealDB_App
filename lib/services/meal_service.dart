@@ -16,7 +16,7 @@ class MealService {
       }
       return categories;
     } else {
-      throw Exception('Failed to load categories');
+      throw Exception('Неуспешно вчитување на категориите');
     }
   }
 
@@ -35,7 +35,7 @@ class MealService {
       }
       return meals;
     } else {
-      throw Exception('Failed to load meals');
+      throw Exception('Неуспешно вчитување на јадењата');
     }
   }
 
@@ -47,7 +47,7 @@ class MealService {
       if (data['meals'] == null) return null;
       return MealDetail.fromJson(data['meals'][0]);
     } else {
-      throw Exception('Failed to load meal details');
+      throw Exception('Неуспешно вчитување на деталите за рецептот');
     }
   }
 
@@ -64,7 +64,7 @@ class MealService {
       }
       return meals;
     } else {
-      throw Exception('Failed to search meals');
+      throw Exception('Неуспешно пребарување на јадењата');
     }
   }
 
@@ -76,7 +76,7 @@ class MealService {
       if (data['meals'] == null) return null;
       return MealDetail.fromJson(data['meals'][0]);
     } else {
-      throw Exception('Failed to load random meal');
+      throw Exception('Неуспешно вчитување на рандом рецептот');
     }
   }
 }

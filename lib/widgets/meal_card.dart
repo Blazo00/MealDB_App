@@ -23,7 +23,6 @@ class MealCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Слика
             Expanded(
               child: CachedNetworkImage(
                 imageUrl: meal.strMealThumb,
@@ -38,7 +37,6 @@ class MealCard extends StatelessWidget {
                 errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
-            // Текст
             Container(
               padding: const EdgeInsets.all(8),
               child: Text(

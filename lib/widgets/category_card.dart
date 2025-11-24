@@ -23,9 +23,8 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Слика - зазема поголем дел
             Expanded(
-              flex: 5, // 5/7 од просторот
+              flex: 5,
               child: CachedNetworkImage(
                 imageUrl: category.strCategoryThumb,
                 fit: BoxFit.cover,
@@ -39,16 +38,14 @@ class CategoryCard extends StatelessWidget {
                 errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
-            // Текст секција - компактна
             Expanded(
-              flex: 2, // 2/7 од просторот
+              flex: 2,
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Наслов
                     Text(
                       category.strCategory,
                       style: const TextStyle(
@@ -59,7 +56,6 @@ class CategoryCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 2),
-                    // Краток опис
                     Text(
                       category.strCategoryDescription,
                       style: TextStyle(
